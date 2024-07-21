@@ -11,7 +11,7 @@ const DraggableDiv = () => {
   const startXRef = useRef(0);
   const positionRef = useRef(0);
 
-  const isMobile = window.innerWidth <= 768; // Adjust the width as needed for mobile detection
+  const [isMobile,setIsMobile] = useState(false); // Adjust the width as needed for mobile detection
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!isAnimating) {
@@ -109,6 +109,9 @@ const DraggableDiv = () => {
     // Add your function logic here
   };
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, [])
   useEffect(() => {
     if (isDragging) {
       window.addEventListener('mousemove', handleMouseMove);
