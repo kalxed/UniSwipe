@@ -14,7 +14,8 @@ const defaultSchoolData: SchoolDataResponse = {
     schoolTuition: "",
     schoolAcceptanceRate: "",
     schoolWebsite: "",
-    schoolTopMajor: ""
+    schoolTopMajor: "",
+    schoolUndergradPopulation: "",
 };
 
 const DraggableDiv = () => {
