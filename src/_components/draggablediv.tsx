@@ -91,8 +91,10 @@ const DraggableDiv = () => {
     // Determine direction and log it
     if (targetPosition > 0) {
       console.log('Dragging to the right');
+      sendData("right"); 
     } else {
       console.log('Dragging to the left');
+      sendData("left");
     }
   };
 
@@ -101,12 +103,41 @@ const DraggableDiv = () => {
     setTransitionDuration('0s');
     setPosition(0);
     positionRef.current = 0;
-    callFunctionAfterAnimation();
   };
 
-  const callFunctionAfterAnimation = () => {
+  async function sendData(swipeDirection: string) {
     console.log('Function called after animation');
-    // Add your function logic here
+    console.log(swipeDirection)
+
+    // post request
+    try {
+      const response = await fetch("http://localhost:5000/compute", {
+        method: "POST", 
+        mode: 'cors', 
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ swipe_direction: String(swipeDirection)})
+      });
+
+      // error handling
+      if (!response.ok) {
+        throw new Error("HTTP Error: ${response.status}");
+      }
+
+      // parse JSON
+      const data = await response.json();
+
+      // set result
+      // TODO set result properly into the textbox
+      console.log(data.result);
+      
+    } catch (error) {
+      console.error("Error: ", error);
+      // TODO set textbox as error
+    }
+
+
   };
 
   useEffect(() => {
