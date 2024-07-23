@@ -1,4 +1,7 @@
 # UniSwipe Frontend Application
+By: Kai Davidson, Sarah Kogan, and Dominic Ranelli
+
+CS539 Project Frontend
 
 ## Getting Started
 
@@ -13,8 +16,4 @@ npm run dev
 
 ## Connecting to the Model API
 
-To connect the model API you just need to set an environment variable for where you are running the model. The model repository is available [here](https://github.com/kalxed/uniswipebackend) for download.
-
-In the root directory of the repository, navigate to the .env.local file. Replace the value of the variable with the address and port of where your server is running.
-
-Now, if rerun your website with the environment variable properly populated, you should be retrieving schools from the model and able to swipe on the site.
+To connect the model API you just need to set an environment variable for where you are running the model. The model repository is available [here](https://github.com/kalxed/uniswipebackend) for download. In the root directory of this repository, navigate to the `.env.local` file. Replace the value of the variable with the address and port of where your server is running. Now, if rerun your website with the environment variable properly populated, you should be retrieving schools from the model and able to swipe on the site. Make sure the Flask API is fully initialized and running and reload the page if needed to connect them properly.

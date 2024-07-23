@@ -110,10 +110,8 @@ const DraggableDiv = () => {
         }, 300);
 
         if (targetPosition > 0) {
-            console.log("Dragging to the right");
             decision.current = true;
         } else {
-            console.log("Dragging to the left");
             decision.current = false;
         }
     };
@@ -129,7 +127,6 @@ const DraggableDiv = () => {
     useEffect(() => {
         if (animationEnded) {
             const fetchSchoolData = async () => {
-                console.log("Function called after animation");
                 var response = await getNextSchool(decision.current);
                 console.log(response);
                 if (response) {
@@ -178,7 +175,7 @@ const DraggableDiv = () => {
     }, [isDragging]);
 
     return (
-        <div className="flex items-center justify-center grow touch-none select-none bg-orange-50 no-touch-move">
+        <div className="flex items-center justify-center grow touch-none select-none bg-orange-50 no-touch-move overflow-hidden">
             <div
                 onMouseDown={handleMouseDown}
                 onTouchStart={handleTouchStart}
