@@ -18,7 +18,7 @@ export default function Page() {
 					</a>
 					, to present one university at a time, along with several
 					relevant features. The student can then swipe left or right,
-					which continuously informs the model of the student's
+					which continuously informs the model of the student&apos;s
 					preferences, and continuously updates the choices that the
 					student is shown.
 				</p>
@@ -35,10 +35,10 @@ export default function Page() {
 					Current filtering systems run the risk of removing colleges
 					that may be a great fit because of biased rankings and
 					overly rigid criteria. They may oversimplify complex data
-					down to generic criteria that don't capture a student's
+					down to generic criteria that don&apos;t capture a student&apos;s
 					preferences. They also tend to overemphasize certain factors
 					that overshadow other aspects of campus and academic
-					culture. UniSwipe uses a student's own inputs to learn more
+					culture. UniSwipe uses a student&apos;s own inputs to learn more
 					about what that student is interested in. By displaying one
 					university at a time, the student can focus entirely on the
 					offerings of that school based on the information provided
@@ -84,16 +84,13 @@ export default function Page() {
 						</a>{" "}
 						dataset, published by the Department of Education. This
 						is a free and public dataset containing aggregate data
-						on colleges and universities from 1993 to 2023.{" "}
-						<br></br>
-						The dataset contains a total of about 6500 collegiate
+						on colleges and universities from 1993 to 2023. The dataset contains a total of about 6500 collegiate
 						institutions in the United States, with 3744 columns.
 						These columns have a mix of text data, one-hot encoded,
-						and numerical features. <br></br>
-						To process this data, we removed a total of 1803 columns
+						and numerical features. To process this data, we removed a total of 1803 columns
 						during the feature selection process. We found that
-						certain featurs, such as loan repayment, were less
-						significant for a student's understanding of a
+						certain features, such as loan repayment, were less
+						significant for a student&apos;s understanding of a
 						university. We also removed columns with over 50% NA
 						values.{" "}
 					</p>
