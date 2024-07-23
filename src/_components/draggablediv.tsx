@@ -146,6 +146,39 @@ const DraggableDiv = () => {
 		};
 	}, [isDragging]);
 
+  async function sendData(swipeDirection: string) {
+    console.log('Function called after animation');
+    console.log(swipeDirection)
+
+    // post request
+    try {
+      const response = await fetch("http://localhost:5000/compute", {
+        method: "POST", 
+        mode: 'cors', 
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ swipe_direction: String(swipeDirection)})
+      });
+
+      // error handling
+      if (!response.ok) {
+        throw new Error("HTTP Error: ${response.status}");
+      }
+
+      // parse JSON
+      const data = await response.json();
+
+      // set result
+      // TODO set result properly into the textbox
+      console.log(data.result);
+      
+    } catch (error) {
+      console.error("Error: ", error);
+      // TODO set textbox as error
+    }
+  }
+  
 	return (
 		<div className="flex items-center justify-center min-h-screen touch-none select-none bg-gray-100 no-touch-move">
 			<div
