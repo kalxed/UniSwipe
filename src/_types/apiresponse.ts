@@ -8,4 +8,5 @@ export type SchoolDataResponse = {
 	schoolTuition: string;
 	schoolAcceptanceRate: string;
 	schoolTopMajor: string;
+    schoolUndergradPopulation: string;
 };
