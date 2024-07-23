@@ -1,6 +1,6 @@
 import { SchoolDataResponse } from "@/_types";
 
-export function getNextSchool(result: boolean): Promise<SchoolDataResponse> {
+export function getNextSchool(result: boolean) {
 	return fetch(`http://127.0.0.1:8000/compute`, {
 		method: "POST",
 		headers: {
