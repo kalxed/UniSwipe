@@ -1,6 +1,6 @@
 export default function Page() {
 	return (
-		<div className="flex grow flex-col p-10">
+		<div className="flex grow flex-col p-10 bg-orange-50">
 			<p className="text-2xl font-bold text-center">UniSwipe</p>
 			<p className="text-lg italic text-center">
 				Reinforcement Learning for College Decisions

@@ -178,7 +178,7 @@ const DraggableDiv = () => {
     }, [isDragging]);
 
     return (
-        <div className="flex items-center justify-center grow touch-none select-none bg-gray-100 no-touch-move">
+        <div className="flex items-center justify-center grow touch-none select-none bg-orange-50 no-touch-move">
             <div
                 onMouseDown={handleMouseDown}
                 onTouchStart={handleTouchStart}
