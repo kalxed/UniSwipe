@@ -7,9 +7,9 @@ interface SchoolContainerProps {
 export function SchoolContainer({ schooldata }: SchoolContainerProps) {
     return (
         <div className="flex flex-col items-center justify-center w-full h-full bg-gray-100 p-5">
-            <div className="max-w-96 min-w-80 min-h-80 max-h-96 rounded-md bg-blue-300 text-white flex items-center justify-center">
+            <div className="max-w-96 min-w-80 min-h-96 rounded-md bg-blue-300 text-white flex items-center justify-center">
                 {schooldata.schoolName === "" ? ( // If there is no school data, display a loading message
-                    <div className="text-center">Loading...</div>
+                    <div className="text-center text-wrap text-2xl">Run Model Locally to Use School Selection</div>
                 ) : ( 
                 <div className="text-center">
                     <div className="text-2xl">{schooldata.schoolName}</div>
